@@ -1,72 +1,91 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>title</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!--<link rel="shortcut icon" href="../../assets/ico/favicon.ico">-->
+
+    <title>Starter Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+
 </head>
+
 <body>
-    <div class="name">Serhii Bashlii</div>
-    <div class="contacts">
-        <div class="site">www.apibest.com</div>
-        <div class="e-mail">team@apibest.com</div>
-        <div class="telephone">+380 94 710 26 35</div>
+
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Resume</a>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Основное</a></li>
+                <li><a href="#education">Образование</a></li>
+                <li><a href="#contact">Контакты</a></li>
+            </ul>
+        </div><!--/.nav-collapse -->
     </div>
-    <div class="about">
-        <div class="info">
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>Resume</h1>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4"><p class="text-center"><a href="www.apibest.com" target="_blank">www.apibest.com</a></p></div>
+        <div class="col-md-4"><p class="text-center"><a href="mailto:team@apibest.com">team@apibest.com</a></p></div>
+        <div class="col-md-4"><p class="text-center"><a href="tel:+380 94 710 26 35">+380 94 710 26 35</a></p></div>
+    </div>
+</div>
+<div class="container-fluid" id="education">
+    <div class="row">
+        <div class="col-md-offset-2 col-md-4 col-sm-6 col-xs-6">
             <p>Address: Kharkiv, Ukraine</p>
             <p>Birthday: 18th June 1990</p>
             <p>Nationality: Ukrainian</p>
             <p>English level: Upper-Elementary</p>
         </div>
-        <div class="photo"><img src="img/ya.jpg"></div>
+        <div class="col-md-2 col-md-offset-2 col-md-2 col-sm-6 col-xs-6"><img class="center-block photo" src="img/ya.jpg"></div>
     </div>
-    <div class="title">
-        <h2>WORK EXPERIENCE</h2>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12"><h2 class="text-center">WORK EXPERIENCE</h2></div>
+        <div class="col-md-4"><p class="text-center"><span>04/2015 - now</span></p></div>
+        <div class="col-md-8 "><p><span>APIBEST - IT Project manager</span> Ensuring process of development, coordination of works and terms with the customer, monitoring of work of projects. Negotiations with the customer. Solving of operational issues. Ensuring functioning of planning and reporting systems. Launch and support of software release updates product, Monitoring servers
+            Team: 1PM, 1 JS Developer, 1 PHP developer</p></div>
     </div>
-    <div class="work">
-        <div class="date">04/2015 - now</div>
-        <div class="info">
-            <span>APIBEST - IT Project manager</span>
-            <p>Ensuring process of development, coordination of works and terms with the customer, monitoring of work of projects. Negotiations with the customer. Solving of operational issues. Ensuring functioning of planning and reporting systems. Launch and support of software release updates product, Monitoring servers
-                Team: 1PM, 1 JS Developer, 1 PHP developer</p>
-        </div>
+    <div class="row">
+        <div class="col-md-4"><p class="text-center"><span>03/2013 - 03/ 2015</span></p></div>
+        <div class="col-md-8 "><p><span>Robotics Center “Boteon” - designer of electronics</span> I was engaged in development and manufacture of different electronic devices, their repair. Assistant to the CEO. Operation with documents and staff digging., Content manager of a portal of the company. More than a year I was engaged in writing and filling in content of a portal of the company www.boteon.com</p></div>
     </div>
-    <div class="work">
-        <div class="date">03/2013 - 03/ 2015</div>
-        <div class="info">
-            <span>Robotics Center “Boteon” - designer of electronics</span>
-            <p> I was engaged in development and manufacture of different electronic devices, their repair. Assistant to the CEO. Operation with documents and staff digging., Content manager of a portal of the company. More than a year I was engaged in writing and filling in content of a portal of the company www.boteon.com</p>
-        </div>
-    </div>
-    <div class="title">
-        <h2>EDUCATION</h2>
-    </div>
-    <div class="education">
-        <div class="date">2014 - naw</div>
-        <div class="info">
-            <span>Kharkiv National University of Radio Electronics, Kharkov, Ukraine</span>
-            <p>Specialty: Solid-state electronics.
-                Qualification: Aspirantura (Candidate of Scienes, scientific degree)
-                Dissertation theme: «Digital processing of signals in a microwave microscope».
-            </p>
-        </div>
-        <div class="date">2013 - 2014</div>
-        <div class="info">
-            <span>Kharkiv National University of Radio Electronics Kharkov, Ukraine</span>
-            <p>Specialty: Electronic Devices and Appliances.
-                Qualification: Research Engeneer (Electronics, Telecommunication)
-                Diploma theme: «Optimum control of a house power supply system».</p>
-        </div>
-        <div class="date">2010-2013</div>
-        <div class="info">
-            <span>Kharkiv National University of Radio Electronics Kharkov, Ukraine</span>
-            <p>Specialty: Electronic Appliances and Systems.
-                Qualification: The technical specialist in the field of electronics and telecommunications
-                Diploma theme: «The device climate of control at the car».</p>
-        </div>
-    </div>
+</div>
 
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="dist/js/bootstrap.min.js"></script>
 </body>
 </html>
