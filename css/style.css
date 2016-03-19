@@ -17,3 +17,20 @@ img{
 span{
     font-weight: 600;
 }
+
+
+
+@media screen and (max-width: 991px) {
+    .block-adress p {
+        text-align: center;
+    }
+}
+
+
+.form-group{
+    margin: 10px;
+}
+
+.btn-success{
+    margin-bottom: 10px;
+}

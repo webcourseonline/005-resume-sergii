@@ -58,13 +58,18 @@
 </div>
 <div class="container-fluid" id="education">
     <div class="row">
-        <div class="col-md-offset-2 col-md-4 col-sm-6 col-xs-6">
+        <div class="col-md-6 col-md-push-6 col-sm-6 col-sm-push-6 col-xs-12 "><img class="center-block photo" src="img/ya.jpg"></div>
+        <div class="col-md-6 col-md-pull-6 col-sm-6 col-sm-pull-6 col-xs-12 block-adress">
             <p>Address: Kharkiv, Ukraine</p>
             <p>Birthday: 18th June 1990</p>
             <p>Nationality: Ukrainian</p>
             <p>English level: Upper-Elementary</p>
         </div>
-        <div class="col-md-2 col-md-offset-2 col-md-2 col-sm-6 col-xs-6"><img class="center-block photo" src="img/ya.jpg"></div>
+    </div>
+    <div class="row">
+        <div class=" col-md-12">
+            <button type="button" class="btn btn-primary center-block" data-toggle="modal" data-target=".bs-example-modal-sm">Small modal</button>
+        </div>
     </div>
 </div>
 <div class="container-fluid">
@@ -79,6 +84,25 @@
         <div class="col-md-8 "><p><span>Robotics Center “Boteon” - designer of electronics</span> I was engaged in development and manufacture of different electronic devices, their repair. Assistant to the CEO. Operation with documents and staff digging., Content manager of a portal of the company. More than a year I was engaged in writing and filling in content of a portal of the company www.boteon.com</p></div>
     </div>
 </div>
+<!-- Small modal -->
+<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <form role="form">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="Введите email">
+                    <p class="help-block">Пример строки с подсказкой</p>
+                </div>
+                <div class="form-group">
+                    <label for="comment">Введите ваше сообщение</label>
+                    <textarea class="form-control" rows="5" id="comment"></textarea>
+                </div>
+                <button type="submit" class="btn btn-success center-block" id="btn-succes">Отправить</button>
+            </form>
+        </div>
+    </div>
+</div>
 
 
 
@@ -87,5 +111,36 @@
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="dist/js/bootstrap.min.js"></script>
+
+<script>
+    $('#btn-succes').click(function() {
+
+        var data = {
+                    to: "serg.bem@gmail.com",
+                    body: $("#comment").val(),
+                    subject: $("#email").val()
+        };
+
+        $.ajax({
+            url: "http://10.3.2.21:8080/",
+
+            // The name of the callback parameter, as specified by the YQL service
+            jsonp: "callback",
+
+            // Tell jQuery we're expecting JSONP
+            dataType: "jsonp",
+
+            // Tell YQL what we want and that we want JSON
+            data: data,
+
+            // Work with the response
+            success: function( response ) {
+                console.log( response); // server response
+            }
+        });
+    });
+
+
+</script>
 </body>
 </html>
